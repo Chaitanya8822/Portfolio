@@ -131,8 +131,7 @@ export default function About() {
               <p className="text-gray-300 text-lg leading-relaxed">
                 I'm <span className="text-white font-semibold">Kotari Chaitanya Krishna</span>, an
                 aspiring <span className="gradient-text font-semibold">AI/ML Engineer</span> currently
-                pursuing my MCA with a specialization in Artificial Intelligence and Machine Learning
-                at BVC College of Engineering.
+                pursuing MCA (Master of Computer Applications) at BVC College of Engineering, Rajamundry.
               </p>
               <p className="text-gray-400 leading-relaxed">
                 My journey in AI began with a curiosity about how machines can learn and make
@@ -150,9 +149,9 @@ export default function About() {
             <div className="flex flex-wrap gap-3 pt-2">
               {[
                 { label: 'BVC College of Engineering', color: 'indigo' },
-                { label: 'AI/ML Specialization', color: 'purple' },
+                { label: 'AI/ML', color: 'purple' },
                 { label: 'MCA Student', color: 'cyan' },
-                { label: 'Andhra Pradesh, India', color: 'emerald' },
+                { label: 'Rajamundry,Andhra Pradesh, India', color: 'emerald' },
               ].map(({ label, color }) => (
                 <span
                   key={label}
