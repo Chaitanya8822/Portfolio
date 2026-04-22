@@ -108,7 +108,7 @@ export default function About() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4 w-full">
               {[
-                  { value: '0+', label: 'Years Learning' },
+                  { value: '1+', label: 'Years Learning' },
                   { value: '2', label: 'Projects Built' },
                   { value: '5+', label: 'Certifications' },
                 ].map(({ value, label }) => (
@@ -151,7 +151,7 @@ export default function About() {
                 { label: 'BVC College of Engineering', color: 'indigo' },
                 { label: 'AI/ML', color: 'purple' },
                 { label: 'MCA Student', color: 'cyan' },
-                { label: 'Rajamundry,Andhra Pradesh, India', color: 'emerald' },
+                { label: 'Rajamundry, Andhra Pradesh, India', color: 'emerald' },
               ].map(({ label, color }) => (
                 <span
                   key={label}

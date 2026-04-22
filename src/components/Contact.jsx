@@ -1,9 +1,8 @@
 import { useRef, useState } from 'react'
 import { motion, useInView } from 'framer-motion'
-import emailjs from '@emailjs/browser'
 import {
   FiMail, FiPhone, FiMapPin, FiLinkedin, FiGithub,
-  FiSend, FiCheckCircle, FiAlertCircle, FiLoader,
+  FiSend, FiCheckCircle, FiAlertCircle,
 } from 'react-icons/fi'
 
 const contactInfo = [
@@ -81,7 +80,7 @@ export default function Contact() {
     if (errors[name]) setErrors((prev) => ({ ...prev, [name]: '' }))
   }
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault()
     const validationErrors = validate()
     if (Object.keys(validationErrors).length > 0) {
@@ -91,13 +90,10 @@ export default function Contact() {
 
     setStatus('sending')
     try {
-      // Replace with your EmailJS credentials
-      await emailjs.sendForm(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
-        formRef.current,
-        'YOUR_PUBLIC_KEY'
-      )
+      const mailtoLink = `mailto:chaitanyakrishnakotari@gmail.com?subject=${encodeURIComponent(form.subject)}&body=${encodeURIComponent(
+        `Name: ${form.name}\nEmail: ${form.email}\n\n${form.message}`
+      )}`
+      window.open(mailtoLink, '_blank')
       setStatus('success')
       setForm(initialForm)
       setTimeout(() => setStatus('idle'), 5000)
@@ -297,7 +293,7 @@ export default function Contact() {
                 whileTap={status !== 'sending' ? { scale: 0.98 } : {}}
                 className={`w-full py-3.5 rounded-xl font-semibold text-white text-sm flex items-center justify-center gap-2 transition-all duration-300 ${
                   status === 'success'
-                    ? 'bg-emerald-500'
+                    ? 'bg-emerald-500 cursor-default'
                     : status === 'error'
                     ? 'bg-red-500'
                     : 'glow-btn'
@@ -311,13 +307,8 @@ export default function Contact() {
                 )}
                 {status === 'sending' && (
                   <>
-                    <motion.div
-                      animate={{ rotate: 360 }}
-                      transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
-                    >
-                      <FiLoader size={16} />
-                    </motion.div>
-                    Sending...
+                    <FiSend size={16} />
+                    Opening mail client...
                   </>
                 )}
                 {status === 'success' && (
