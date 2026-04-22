@@ -136,7 +136,7 @@ export default function Hero() {
           <span className="text-indigo-400 font-semibold">Machine Learning</span>,{' '}
           <span className="text-purple-400 font-semibold">Deep Learning</span>, and{' '}
           <span className="text-cyan-400 font-semibold">NLP</span> to solve real-world problems.
-          Currently pursuing MCA in AI/ML at BVC College of Engineering.
+          Currently pursuing MCA at BVC College of Engineering.
         </motion.p>
 
         {/* CTA Buttons */}

@@ -6,7 +6,7 @@ const educationData = [
   {
     id: 1,
     degree: 'Master of Computer Applications (MCA)',
-    specialization: 'Artificial Intelligence & Machine Learning',
+    specialization: null,
     institution: 'BVC College of Engineering',
     location: 'Andhra Pradesh, India',
     period: '2025 – 2027',

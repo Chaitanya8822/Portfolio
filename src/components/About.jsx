@@ -108,10 +108,10 @@ export default function About() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4 w-full">
               {[
-                { value: '3+', label: 'Years Learning' },
-                { value: '10+', label: 'Projects Built' },
-                { value: '5+', label: 'Certifications' },
-              ].map(({ value, label }) => (
+                  { value: '0+', label: 'Years Learning' },
+                  { value: '2', label: 'Projects Built' },
+                  { value: '5+', label: 'Certifications' },
+                ].map(({ value, label }) => (
                 <div key={label} className="glass-card p-4 text-center">
                   <div className="text-2xl font-black gradient-text">{value}</div>
                   <div className="text-gray-500 text-xs mt-1">{label}</div>
