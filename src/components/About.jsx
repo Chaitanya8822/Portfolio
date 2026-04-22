@@ -6,7 +6,7 @@ import { FiCpu, FiCode, FiDatabase, FiZap } from 'react-icons/fi'
 const highlights = [
   {
     icon: FiCpu,
-    title: 'AI/ML Focus',
+    title: 'AI/ML',
     desc: 'Specializing in machine learning algorithms, model training & evaluation',
     color: 'from-indigo-500/20 to-indigo-500/5',
     border: 'border-indigo-500/20',

@@ -46,10 +46,10 @@ const placeholderProjects = [
   {
     id: 6,
     title: 'Coming Soon',
-    subtitle: 'Reinforcement Learning',
-    desc: 'An RL project where an agent learns optimal strategies through interaction with an environment.',
-    tags: ['RL', 'Q-Learning', 'Gym'],
-    color: 'amber',
+    subtitle: 'None',
+    desc: 'None',
+    tags: 'None',
+    color: 'None',
   },
 ]
 
